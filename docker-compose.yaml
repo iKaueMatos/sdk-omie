@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgres
+    environment:
+      - 'POSTGRES_DB=omie'
+      - 'POSTGRES_USER=omie'
+      - 'POSTGRES_PASSWORD=root'
+    ports:
+      - '5432:5432'
+    volumes:  
+      - ./data:/var/lib/postgresql/data
+  pontainer:
+    image: 'portainer/portainer-ce:alpine'
+    container_name: pontainer
+    ports:
+      - '9000:9000'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    restart: always

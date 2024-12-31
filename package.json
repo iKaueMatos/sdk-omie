@@ -1,0 +1,10 @@
+{
+  "name": "omie-integration-ERP",
+  "version": "0.0.1",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.1.1"
+  }
+}
